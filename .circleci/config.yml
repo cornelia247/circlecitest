@@ -31,10 +31,10 @@ jobs:
     docker: 
       -  image: circleci/node:13.8.0
     steps:
-      - checkout
-      - run:
-        name: "say World"
-        command: "echo World!"
+      -  checkout
+      -  run:
+          name: "say World"
+          command: "echo World!"
       
 
 # Invoke jobs via workflows
