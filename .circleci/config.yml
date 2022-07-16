@@ -27,9 +27,9 @@ jobs:
           name: "saved"
           command: "echo saved to a file > output.txt"
       - persist_to_workspace:
-          root: workspace
+          root: /tmp/workspace
           paths:
-            - workspace/output.txt
+            - output.txt
   
   print_output_file:
     docker: 
