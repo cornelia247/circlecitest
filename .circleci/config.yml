@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello!, $MY_NAME_VAR #"
+          command: "echo Hello!, $MY_NAME_VAR how are you!!"
 
   print_hello:
     docker:
