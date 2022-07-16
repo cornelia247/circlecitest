@@ -25,11 +25,11 @@ jobs:
       - checkout
       -  run:
           name: "saved"
-          command: "echo saved to a file > workspace/output.txt"
+          command: "echo saved to a file > output.txt"
       - persist_to_workspace:
           root: workspace
           paths:
-            - output.txt
+            - workspace/output.txt
   
   print_output_file:
     docker: 
