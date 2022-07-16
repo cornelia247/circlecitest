@@ -25,9 +25,9 @@ jobs:
       - checkout
       -  run:
           name: "saved"
-          command: "echo saved to a file > output.txt"
+          command: "echo saved to a file > ~/output.txt"
       - persist_to_workspace:
-          root: /tmp/workspace
+          root: ~/
           paths:
             - output.txt
   
@@ -37,10 +37,10 @@ jobs:
     steps:
       -  checkout
       -  attach_workspace:
-          at: /tmp/workspace
+          at: ~/
       -  run:
           name: "output"
-          command: "cat output.txt"
+          command: "cat ~/output.txt"
       
 
 # Invoke jobs via workflows
